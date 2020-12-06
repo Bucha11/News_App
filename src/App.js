@@ -9,8 +9,9 @@ function App() {
     const [newsArray, setNewsArray] = useState([])
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     const downloadNews = () => {
-        fetch(`${proxyUrl}
-            https://newsapi.org/v2/top-headlines?country=ru&apiKey=9b1c85f042e54f2999825352ed0779f3`)
+        fetch(
+            `${proxyUrl}https://newsapi.org/v2/top-headlines?country=ru&apiKey=9b1c85f042e54f2999825352ed0779f3`
+        )
             .then((response) => {
                 return response.json()
             })
