@@ -1,0 +1,20 @@
+import React from 'react'
+import style from './News.module.css'
+
+export const News = (props) => {
+    return (
+        <div className={style.news}>
+            {props.newsArray ? (
+                <div>
+                    <h2>{props.newsArray.title}</h2>
+                    <img src={props.newsArray.urlToImage} alt="news" />
+                    <div className={style.newsDesc}>
+                        {props.newsArray.description}
+                    </div>
+                </div>
+            ) : (
+                'downloading'
+            )}
+        </div>
+    )
+}

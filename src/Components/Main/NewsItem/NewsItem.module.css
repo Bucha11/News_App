@@ -1,0 +1,15 @@
+.newsItem a {
+    color: black;
+    text-decoration: none;
+}
+
+.newsItem img {
+    max-width: 400px;
+    width: 100%;
+}
+.newsItem {
+    border-bottom: 1px solid rgb(128, 113, 113);
+    margin-bottom: 10px;
+    max-width: 500px;
+    padding: 10px;
+}
