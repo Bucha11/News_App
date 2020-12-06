@@ -19,17 +19,17 @@ function App() {
                 setNewsArray((prev) => [...prev, ...data.articles])
             })
     }
+
+    const scrolling = () => {
+        let windowRelativeBottom = document.documentElement.getBoundingClientRect()
+            .bottom
+        if (windowRelativeBottom < document.documentElement.clientHeight + 1) {
+            downloadNews()
+        }
+    }
     useEffect(() => {
-        window.addEventListener('scroll', () => {
-            let windowRelativeBottom = document.documentElement.getBoundingClientRect()
-                .bottom
-            if (
-                windowRelativeBottom <
-                document.documentElement.clientHeight + 1
-            ) {
-                downloadNews()
-            }
-        })
+        window.addEventListener('scroll', scrolling)
+        window.addEventListener('touchmove', scrolling)
     }, [])
     useEffect(() => {
         downloadNews()
