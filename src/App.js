@@ -10,7 +10,7 @@ function App() {
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     const downloadNews = () => {
         fetch(
-            `${proxyUrl}http://newsapi.org/v2/top-headlines?country=ru&apiKey=9b1c85f042e54f2999825352ed0779f3`
+            `${proxyUrl}https://newsapi.org/v2/top-headlines?country=ru&apiKey=9b1c85f042e54f2999825352ed0779f3:443`
         )
             .then((response) => {
                 return response.json()
