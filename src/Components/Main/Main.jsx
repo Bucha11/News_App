@@ -8,7 +8,7 @@ export const Main = (props) => {
             <NewsItem
                 key={index}
                 title={i.title}
-                img={i.urlToImage}
+                img={i.image}
                 desc={i.description}
                 id={index}
             />

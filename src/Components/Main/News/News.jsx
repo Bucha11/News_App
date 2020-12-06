@@ -7,9 +7,9 @@ export const News = (props) => {
             {props.newsArray ? (
                 <div>
                     <h2>{props.newsArray.title}</h2>
-                    <img src={props.newsArray.urlToImage} alt="news" />
+                    <img src={props.newsArray.image} alt="news" />
                     <div className={style.newsDesc}>
-                        {props.newsArray.description}
+                        {props.newsArray.content}
                     </div>
                 </div>
             ) : (
